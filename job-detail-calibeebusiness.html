@@ -110,7 +110,7 @@
             </div>
             <div class="ant-layout">
                 <div class="AppBar__container___kf9Hm ant-layout-header"><span
-                    class="AppBar__headerLabel___1DGwA">Booking</span>
+                    class="AppBar__headerLabel___1DGwA">Activity</span>
                 <div class="AppBar__buttonContainer___1kzSv">
                     <span class="AppBar__companySelector___1z7rP">
                         <span
@@ -124,7 +124,7 @@
                             <button style="border: none;" type="button" class="ant-btn ant-btn-default"><img
                                     class="AppBar__avatar___2ghkK" alt="avatar"
                                     src="assets/images/Container.png"><span
-                                    class="AppBar__name___3gEfH">Calibee</span></button>
+                                    class="AppBar__name___3gEfH">CÔNG TY TNHH THƯƠNG MẠI VÀ SẢN XUẤT PULSE</span></button>
                                 </div>
                     </span></div>
                 </div>
@@ -141,10 +141,10 @@
                                                        
                                                     </a>
                                                     <div style="width: 25%; height: 100%; border-radius: 24px; overflow: hidden; border: 1px #E0E0E0 solid; justify-content: flex-start; align-items: center; display: inline-flex">
-                                                        <button style="padding:8px 32px; background: #F2FFFC; border-radius: 20px; border: 1px #12B555 solid; flex-direction: column; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+                                                        <button id="job-button" style="padding:8px 32px; background: #F2FFFC; border-radius: 20px; border: 1px #12B555 solid; flex-direction: column; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
                                                             <div style="text-align: center; color: #212121; font-size: 12px; letter-spacing: 0.20px; word-wrap: break-word">Job Details</div>
                                                         </button>
-                                                        <button style="width: 155px; padding: 8px 32px;border-radius: 20px; border: 1px white solid; flex-direction: column; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex; background: none;">
+                                                        <button id="booking-button" style="width: 155px; padding: 8px 32px;border-radius: 20px; border: 1px white solid; flex-direction: column; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex; background: none;">
                                                             <div style="text-align: center; color: #212121; font-size: 12px; word-wrap: break-word">Booking Details</div>
                                                         </button>
                                                     </div>
@@ -461,6 +461,17 @@
             });
 
             table.appendChild(newRow);
+        });
+    </script>
+     <script>
+        var bookingbutton = document.getElementById('booking-button');
+        var jobbutton = document.getElementById('job-button');
+
+        bookingbutton.addEventListener('click', function(event) {
+            window.location.href = 'booking-detail-calibeebusiness.html'; 
+        });
+        jobbutton.addEventListener('click', function(event) {
+            window.location.href = 'job-detail-calibeebusiness.html'; 
         });
     </script>
 </body>

@@ -11,6 +11,10 @@
     }
 }
 
+.text-color{
+    color: #424242;
+}
+
 .gfbs-select-option {
     font-size: 14px;
     line-height: 20px;
