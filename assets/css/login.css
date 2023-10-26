@@ -18,3 +18,7 @@ body{
 .disable-button{
     opacity: 0.8;
 }
+
+input:focus {
+    outline-color: #71D399;
+  }
