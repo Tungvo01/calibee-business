@@ -69,12 +69,6 @@
                             </li>
                             <li class="ant-menu-item" role="menuitem" aria-selected="false">
                                 <span>
-                                    <span><img src="assets/images/Wallet.svg"> </span>
-                                    <span class="MenuLabel__menuLabel___1ZtQ6">Payments</span>
-                                </span>
-                            </li>
-                            <li class="ant-menu-item" role="menuitem" aria-selected="false">
-                                <span>
                                     <span><img src="assets/images/Setting.svg"> </span>
                                     <span class="MenuLabel__menuLabel___1ZtQ6">Settings</span>
                                 </span>
@@ -442,15 +436,14 @@
                 if (columnName === 'status') {
                     if (rowData.status === 'Completed') {
                         cell.innerHTML = `
-                        <span class="activity-table_totalFare__13EPs" style="display: flex; gap: 5px; font-weight: 600;">
+                        <span class="activity-table_totalFare__13EPs" style="display: flex; gap: 5px;">
                             <img src="assets/images/ph_dot-outline-fill.svg">
                             <span style="color: #383E43;">${rowData.status}</span>
                         </span>
                     `;
                     } else {
-                    // Hiển thị nội dung khác khi status không phải "Completed"
                     cell.innerHTML = `
-                        <span class="activity-table_totalFare__13EPs" style="display: flex; gap: 5px; font-weight: 600;">
+                        <span class="activity-table_totalFare__13EPs" style="display: flex; gap: 5px;">
                             <img src="assets/images/gray.svg">
                             <span style="color: #383E43;">${rowData.status}</span>
                         </span>
