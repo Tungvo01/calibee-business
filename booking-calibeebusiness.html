@@ -397,7 +397,7 @@
                  price: '25.000.000đ',
                  discount: '-',
                  total: '25.000.000đ',
-                 status: 'Completed',
+                 status: 'On-Service',
                  pay_status: 'Paid',
              },
              {
@@ -492,13 +492,24 @@
                                             <p style="color: #383E43;">${rowData.time}</p>
                                         </span>`;
                  } else
+                 
                  if (columnName === 'status') {
-                    cell.innerHTML = `<div style="width: 100%; height: 100%; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                                        <div style="flex: 1 1 0; height: 24px; padding: 6px 10px; background: rgba(74, 222, 128, 0.12); border-radius: 6px; justify-content: center; align-items: center; gap: 8px; display: flex">
-                                            <div style="text-align: center; color: #4AAF57; font-size: 10px; font-weight: 600; letter-spacing: 0.20px; word-wrap: break-word">${rowData.status}</div>
-                                        </div>
-                                     </div>`;
+                  
+                
+                            if(rowData.status === 'On-Service'){
+                            
+                            cell.innerHTML = `<div style="width: 100%; height: 100%; padding-left: 10px; padding-right: 10px; padding-top: 6px; padding-bottom: 6px; background: rgba(247, 85, 85, 0.12); border-radius: 6px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+                                                <div style="text-align: center; color: #F75555; font-size: 10px; font-family: Roboto; font-weight: 500; letter-spacing: 0.20px; word-wrap: break-word">${rowData.status}</div>
+                                            </div>`
+                        }else{
+                            cell.innerHTML = `<div style="width: 100%; height: 100%; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                                                <div style="flex: 1 1 0; height: 24px; padding: 6px 10px; background: rgba(74, 222, 128, 0.12); border-radius: 6px; justify-content: center; align-items: center; gap: 8px; display: flex">
+                                                    <div style="text-align: center; color: #4AAF57; font-size: 10px; font-weight: 600; letter-spacing: 0.20px; word-wrap: break-word">${rowData.status}</div>
+                                                </div>
+                                            </div>`;
+                        }
                  }else
+                
                  if (columnName === 'pay_status') {
                     cell.innerHTML = `<div style="width: 100%; height: 100%; justify-content: flex-start; align-items: flex-start; display: inline-flex">
                                             <div style="flex: 1 1 0; height: 24px; padding: 6px 10px; border-radius: 6px; border: 1px #4AAF57 solid; justify-content: center; align-items: center; gap: 8px; display: flex">
